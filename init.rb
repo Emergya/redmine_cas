@@ -14,7 +14,7 @@ Redmine::Plugin.register :redmine_cas do
   name 'CAS Web Authentication'
   author 'José M. Prieto (Emergya)'
   description 'CAS single sign-on authentication via CAS web interface'
-  version '1.0'
+  version '1.1'
   requires_redmine :version_or_higher => '0.9.0'
   url 'http://gitorious.org/redmine_cas'
   author_url 'http://www.emergya.es'
