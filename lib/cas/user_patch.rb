@@ -1,4 +1,3 @@
-require 'dispatcher'
 
 # Patches Redmine's User dinamically. Disallows password change.
 module CAS
@@ -21,7 +20,7 @@ module CAS
   end
 end
 
-Dispatcher.to_prepare do
+ActionDispatch::Callbacks.to_prepare do
   require_dependency 'principal'
   require_dependency 'user'
   User.send(:include, CAS::UserPatch)

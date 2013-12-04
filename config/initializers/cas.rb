@@ -1,7 +1,7 @@
 # Load CAS authentication configuration
 
 module CAS
-  CONFIG = YAML.load_file("#{File.dirname(__FILE__)}/../cas.yml")[RAILS_ENV]
+  CONFIG = YAML.load_file("#{File.dirname(__FILE__)}/../cas.yml")[Rails.env]
 end
 
 if CAS::CONFIG['enabled']
